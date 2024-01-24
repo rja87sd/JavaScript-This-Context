@@ -49,11 +49,9 @@ const person = {
   },
 
   //   Give the object a method that is an arrow function.
-  farewell: () => { // I had to look this line up. Found it on ChatGPT.
-    console.log("Goodbye,", this.name + ".");
-  },
+  farewell: a => console.log (a, this.name + "."),
 };
 
 // Invoke each method. Note that the arrow function does not populate the desired data to the console log.
 person.greet();
-person.farewell();
+person.farewell("Goodbye,");
